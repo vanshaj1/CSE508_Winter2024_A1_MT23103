@@ -1,0 +1,15 @@
+soft
+material
+,
+good
+open
+sound
+,
+play
+mouthpiece
+#
+c5
+like
+2,5
+standard
+mouthpieces

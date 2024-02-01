@@ -1,0 +1,5 @@
+the first unit i got had a problem with noise on the line and a cyclic distortion. it turns out that the lm chip was overheating and defective. i received a replacement unit, and it works well. there is only a very slight amount of added static now, compared to my other preamp.
+
+make sure that if you are going with a xlr -> 3.5mm unbalanced cable, your sound card is 5v analog (or usb). if you have an older onboard sound card that runs on 3v, there will be a lot of static/background noise.
+
+i purchased this to power a basic condenser microphone: https://www.amazon.com/gp/product/b01fsh4wui/

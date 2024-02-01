@@ -1,0 +1,1 @@
+items work, but the description doesn't match the product. these are not rgbw led, they were instead rgb.
