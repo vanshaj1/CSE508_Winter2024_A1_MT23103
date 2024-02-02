@@ -1,3 +1,5 @@
+# Ciatations:- https://medium.com/codechef-vit/nlp-101-data-preprocessing-representation-using-nltk-def9b01194ce , https://medium.com/product-ai/text-preprocessing-in-python-steps-tools-and-examples-bf025f872908 
+
 import os
 import nltk
 import string

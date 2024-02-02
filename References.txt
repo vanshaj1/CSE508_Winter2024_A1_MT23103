@@ -1,4 +1,6 @@
 //***************Data Preprocessing*****************
 https://medium.com/codechef-vit/nlp-101-data-preprocessing-representation-using-nltk-def9b01194ce // main
 https://medium.com/product-ai/text-preprocessing-in-python-steps-tools-and-examples-bf025f872908  // can be used
-//**************
+
+//******** For creating Inverted index logic *******
+https://williamscott701.medium.com/information-retrieval-unigram-postings-and-positional-postings-a28b907c4e8#:~:text=Unigram%20Inverted%20Index%3A&text=in%20this%20technique%20we%20store,a%20word%20is%20called%20postings.

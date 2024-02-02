@@ -1,3 +1,5 @@
+# citation:- https://williamscott701.medium.com/information-retrieval-unigram-postings-and-positional-postings-a28b907c4e8#:~:text=Unigram%20Inverted%20Index%3A&text=in%20this%20technique%20we%20store,a%20word%20is%20called%20postings.
+
 import os
 import nltk
 import string
@@ -162,7 +164,7 @@ def isExistsInDoc(TokensList,termIdx,docId,pos):
 
 
 #************************************ Calling Functions *******************************************
-# create_Inverted_Index()
-# saveInvertedIndex()
+create_Inverted_Index()
+saveInvertedIndex()
 LoadInvertedIndex()
 Input_Output_Func()
