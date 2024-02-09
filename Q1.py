@@ -6,8 +6,8 @@ import string
 from pathlib import Path
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-# nltk.download('punkt')
-# nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('stopwords')
 from bs4 import BeautifulSoup
 
 newDirectory = "Preprocessed files"
@@ -28,9 +28,7 @@ def Lowercase_filtering_func():
     for file in files:
         f = open(file,"r")
         content = f.read()
-        print(content)
         content = content.lower()
-        print(content)
         newPath = newDirectory+ '/Lowercase files/'+ file.name
         nf = open(newPath,'w')
         nf.write(content)
@@ -48,7 +46,7 @@ def Tokenization_func():
                 script.extract()
             content = soup.get_text()
         tokens = word_tokenize(content)
-        print(tokens)
+
         newPath = newDirectory+ '/Tokenized files/'+ file.name
         nf = open(newPath,"a")
         for token in tokens:
@@ -90,8 +88,6 @@ def Punctuation_filtering_func():
             translator = str.maketrans('', '', string.punctuation)
             newToken = word.translate(translator)
             newTokens.append(newToken)
-        print(content)
-        print(newTokens)
 
         newPath = newDirectory+ '/Punctuation filtered files/'+ file.name
         nf = open(newPath,"a")
@@ -112,8 +108,6 @@ def Whitespace_filtering_func():
             newToken = word.strip()
             if(newToken != ''):
                 newTokens.append(newToken)
-        print(content)
-        print(newTokens)
 
         newPath = newDirectory+ '/Whitespace filtered files/'+ file.name
         nf = open(newPath,"a")

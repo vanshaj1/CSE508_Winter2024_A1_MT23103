@@ -8,6 +8,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from bs4 import BeautifulSoup
 import pickle
+import sys
 
 #************* Unigram Inverted index **************
 Inverted_index = {}
@@ -25,7 +26,7 @@ def create_Intverted_Index():
         content = f.readlines()
         docId = int(file.name[4:-4])
         DocId_pool.append(docId)
-        print(docId)
+        # print(docId)
         for word in content:
             term = word.strip()
             if Inverted_index.get(term) == None:
@@ -110,6 +111,9 @@ def Input_Output_Func():
         TokensList = preprocessingFunc(sentence)
         Term_Doc_List = []
         for term in TokensList:
+            if Inverted_index.get(term) == None:
+                print("Terms in the Query is not in the search space")
+                sys.exit()
             doc_List = Inverted_index.get(term)
             Term_Doc_List.append(doc_List)
 

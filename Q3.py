@@ -8,6 +8,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from bs4 import BeautifulSoup
 import pickle
+import sys
 
 #************* Positional Inverted index **************
 Inverted_index = {}
@@ -22,7 +23,7 @@ def create_Inverted_Index():
         f = open(file,"r")
         content = f.readlines()
         docId = int(file.name[4:-4])
-        print(docId)
+        # print(docId)
         i = 1
         for word in content:
             term = word.strip()
@@ -134,6 +135,9 @@ def Input_Output_Func():
 def find_Containing_Docs(TokensList):
     firstTerm = TokensList[0]
     res = []
+    if Inverted_index.get(firstTerm) == None:
+        print("Terms in the Query is not in the search space")
+        sys.exit()
     Docs_Pos_Lists = Inverted_index.get(firstTerm)
     for list in Docs_Pos_Lists:
         docId = list[0]
@@ -151,6 +155,9 @@ def isExistsInDoc(TokensList,termIdx,docId,pos):
         return True
 
     term = TokensList[termIdx]
+    if Inverted_index.get(term) == None:
+        print("Terms in the Query is not in the search space")
+        sys.exit()
     Docs_Pos_Lists = Inverted_index.get(term)
     for list in Docs_Pos_Lists:
         if(list[0] == docId):
